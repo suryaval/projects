@@ -7,4 +7,4 @@ Using Java swings a game interface is designed with three options for the user a
 #
 Name: Sales Tracking System
 #
-
+With best practices in design of a software system, implemented in PHP with MySQL database through PHPMyAdmin. In a team of three, this project is done as part of System Analysis & Design(CSCI567) course.
