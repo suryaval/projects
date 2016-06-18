@@ -1,4 +1,4 @@
-# projects
+# projects by Surya Vallabhaneni
 This repo contains source code of all projects done by me.
 #
 Name: RPSGame.zip
