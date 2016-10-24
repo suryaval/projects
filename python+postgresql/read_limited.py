@@ -10,19 +10,14 @@ try:
 	cur.execute("SELECT * FROM Cars")
 	while True:
 		row = cur.fetchone()
-        
-        if row == None:
+		if(row == None):
 			break
-            
-        print row[0], row[1], row[2]
+		print(row[0], row[1])
 
 except psycopg2.DatabaseError as e:
 	if con:
 		con.rollback()
-	print('Error %s' % e)
-	#print("Error")
-	#sys.exit(1)
-    
+	print('Error %s' % e) 
     
 finally:
     
