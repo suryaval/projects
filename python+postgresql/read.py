@@ -7,7 +7,7 @@ con = None
 try:
 	con = psycopg2.connect(database='album', user='surya', password='Jan@2016')
 	cur = con.cursor()
-	cur.execute("SELECT * FROM Cars")
+	cur.execute("SELECT * FROM Cars WHERE name='Volvo'")
 	rows = cur.fetchall()
 	for row in rows:
 		print(row)

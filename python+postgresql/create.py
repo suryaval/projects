@@ -9,7 +9,7 @@ con = None
 
 try:
      
-    con = psycopg2.connect(database='album', user='surya', password='Jan@2016')  
+    con = psycopg2.connect(database='phtool', user='navadeep', password='navadeep')  
     
     cur = con.cursor()
   
@@ -28,7 +28,7 @@ try:
 except psycopg2.DatabaseError as e:
 	if con:
 		con.rollback()
-    print('Error %s' % e)
+	print('Error %s' % e)
 	#print("Error")
 	#sys.exit(1)
     
