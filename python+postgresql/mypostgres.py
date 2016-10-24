@@ -9,11 +9,11 @@ con = None
 
 try:
      
-    con = psycopg2.connect(database='album', user='surya', password='Jan@2016') 
+    con = psycopg2.connect(database='phtool', user='navadeep', password='navadeep') 
     cur = con.cursor()
     cur.execute('SELECT version()')          
     ver = cur.fetchone()
-    print(ver)    
+    print("version of current POSTGRESQL server is:",ver)    
     
 
 except psycopg2.DatabaseError as e:
