@@ -26,6 +26,8 @@ try:
     con.commit()
 
 except psycopg2.DatabaseError as e:
+	if con:
+		con.rollback()
     print('Error %s' % e)
 	#print("Error")
 	#sys.exit(1)
