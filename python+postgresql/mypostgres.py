@@ -9,7 +9,7 @@ con = None
 
 try:
      
-    con = psycopg2.connect(database='album', user='postgres', password='postgresql') 
+    con = psycopg2.connect(database='album', user='surya', password='Jan@2016') 
     cur = con.cursor()
     cur.execute('SELECT version()')          
     ver = cur.fetchone()
