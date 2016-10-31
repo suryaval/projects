@@ -6,23 +6,21 @@ from bottle import run, template, get, post, request, route
 
 con = None
 
-@get('/plot')
+@route('/plot',method='POST')
 def form():
     #return template('login', title='Login')
-	return '''<h2>POSTGRES LOGIN</h2><form method="POST" action="/plot">UserID: <input name="uid" type="text" />Password:<input name="upwd" type="password" /><input type="submit" /><br/></form>'''
+	return '''<h2>POSTGRES LOGIN</h2><form method="POST" action="/plot2">UserID: <input name="uid" type="text" />Password:<input name="upwd" type="password" /><input type="submit" /><br/></form>'''
 	
-@post('/plot')
+@route('/plot2', method='GET')
 def submit():
     # grab data from form
 	userid = request.forms.get('uid')
 	userpwd = request.forms.get('upwd')
-	validate(userid,userpwd)
+	return validate(userid,userpwd)
 
-#@route('/plot')
-def validate(uid,upwd):
-	var1 = uid
-	var2 = upwd
-	con = psycopg2.connect(database='phtool', user='navadeep', password='navadeep')  
+#@route('/plot3', method='GET')
+def validate():
+	con = psycopg2.connect(database='phtool', user='navadeep', password='navadeep')
 	cur = con.cursor()
 	cur.execute("SELECT * FROM users where id=var1 and pass=var2")
 	data = cur.fetchall()
