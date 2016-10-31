@@ -1,7 +1,7 @@
 from bottle import route, run, template
 
-@route('/hello/<name>')
+@route('/navadeep/<name>')
 def index(name):
-    return template('<b>Hello {{name}}</b>!', name=name)
+    return template('<b>Navadeep... {{name}}</b>!', name=name)
 
 run(host='localhost', port=8088)
