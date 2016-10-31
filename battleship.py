@@ -27,4 +27,4 @@ print ship_col
 
 # Write your code below!
 if guess_row == ship_row and guess_col == ship_col:
-    print "Congratulations! You sank my battleship!"
+    print "Congratulations! You sank my battleship! You are the winner!! Happy Halloween"
