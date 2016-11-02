@@ -1,4 +1,5 @@
-#battleship
+#battleship program
+
 
 from random import randint
 
